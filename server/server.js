@@ -36,3 +36,14 @@ app.get('/', (req, res, next) => {
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`)
 })
+
+// mangodb
+
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:27017/argentbank', {  
+    useNewUrlParser: true,  
+    useUnifiedTopology: true  
+})
+.then(() => console.log('🟢 Connexion à MongoDB réussie'))
+.catch(err => console.error('🔴 Erreur de connexion à MongoDB', err));
