@@ -122,7 +122,7 @@ paths:
         '500':
           description: Internal Server Error
 
-  /user/transactions/{month}:
+  /user/transactions/month/{month}:
     get:
       security:
         - Bearer: []
